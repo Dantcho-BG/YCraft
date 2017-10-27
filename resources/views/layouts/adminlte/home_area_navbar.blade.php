@@ -97,7 +97,7 @@
                             </li>
                             @if(Auth::user()->admin == 1)
                             <li>
-                                <a href="/dashboard"><i class="fa fa-gears"></i></a>
+                                <a href="/dashboard"><i class="fa fa-tachometer"></i></a>
                             </li>
                             @endif
                             @endguest

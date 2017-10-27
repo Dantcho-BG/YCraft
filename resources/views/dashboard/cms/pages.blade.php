@@ -40,6 +40,7 @@
                   <th>Page Title</th>
                   <th>Page URL</th>
                   <th>Page Content</th>
+                  <th>Page Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -49,7 +50,12 @@
                     @foreach ($websitePagesList[$websitePagesItemsNumber] as $websitePagesData)
                       <td>{{$websitePagesData}}</td>
                     @endforeach
-
+                    <td>
+                      <div class="btn-group">
+                        <a href="/dashboard/editpage/{{$websitePagesList[$websitePagesItemsNumber]->page_id}}" type="button" class="btn btn-primary btn-xs">Settings</a>
+                        <a type="button" class="btn btn-danger btn-xs">Delete</a>
+                      </div>
+                    </td>
                     <?php $websitePagesItemsNumber ++; ?>
                     @if(!empty($websitePagesList[$websitePagesItemsNumber]))
                        @continue
@@ -66,6 +72,7 @@
                   <th>Page Title</th>
                   <th>Page URL</th>
                   <th>Page Content</th>
+                  <th>Page Actions</th>
                 </tr>
                 </tfoot>
               </table>

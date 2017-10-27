@@ -22,7 +22,18 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li @if(Request::is('dashboard/pages')) class='active' @endif><a href="/dashboard/pages"><i class="fa fa-file"></i> Pages</a></li>
-                                <li @if(Request::is('dashboard/pages/create')) class='active' @endif><a href="/dashboard/pages/create"><i class="fa fa-file"></i> Add New Page</a></li>
+                                <li @if(Request::is('dashboard/pages/create')) class='active' @endif><a href="/dashboard/pages/create"><i class="fa fa-file"></i> New Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="@if(Request::is('dashboard/modules/*') || Request::is('dashboard/modules')) active menu-open @endif treeview">
+                            <a href="#">
+                                <i class="fa fa-cube "></i> <span>Modules</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li @if(Request::is('dashboard/pages')) class='active' @endif><a href="/dashboard/modules"><i class="fa fa-file"></i> Modules</a></li>
                             </ul>
                         </li>
                     @endif

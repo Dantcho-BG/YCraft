@@ -5,7 +5,7 @@
 @section ('website_url', '/')
 
 @section ('website_title', 'YCraft')
-@section ('page_name', 'Dashboard Pages')
+@section ('page_name', 'Dashboard New Page')
 
 @section ('mini_website_name_first_part', 'Y')
 @section ('mini_website_name_second_part', 'C')
@@ -26,14 +26,11 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Website Pages</h3>
-              <div class="box-tools pull-right" data-toggle="tooltip" title="Create a new page">
-                  <a type="button" href="/dashboard/pages/create" class="btn btn-default">New Page</i></a>
-              </div>
+              <h3 class="box-title">New Page</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              
+
             </div>
             <!-- /.box-body -->
           </div>

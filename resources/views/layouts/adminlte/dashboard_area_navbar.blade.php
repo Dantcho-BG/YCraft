@@ -60,7 +60,7 @@
                 @if(Auth::user()->admin == 1)
                     @if(Request::is('dashboard/*') || Request::is('dashboard'))
                     <li>
-                        <a href="../"><i class="fa fa-eye"></i></a>
+                        <a href="/"><i class="fa fa-eye"></i></a>
                     </li>
                     @else
                     <li>
