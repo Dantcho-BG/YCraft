@@ -9,30 +9,22 @@ use Redirect;
 class HomeController extends Controller
 {
 
-    public function getListOfWebsitePages () {
 
-      $pagesList = DB::select("SELECT page_slug, page_title from website_pages");
-      return $pagesList;
-
-    }
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+     public function getListOfWebsitePages () {
+
+       $pagesList = DB::select("SELECT page_slug, page_title from website_pages");
+       return $pagesList;
+
+     }
+
+    public function index() {
         $pagesList = $this->getListOfWebsitePages();
         $pagesAmount = count($pagesList);
         //return redirect('/');
