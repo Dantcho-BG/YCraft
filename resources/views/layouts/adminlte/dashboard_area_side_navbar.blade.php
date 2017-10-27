@@ -29,16 +29,18 @@
                 @endif
                     @if(!Request::is('dashboard/*') && !Request::is('dashboard'))
                     <li class="header">MAIN NAVIGATION</li>
-                        <li>
-                            <a href="/home">
-                                <i class="fa fa-home"></i> <span>Home Page</span>
+                        <?php $loopRuns = 0 ?>
+                        @while(true)
+                          <li>
+                            <a href="{{$websitePagesList[$loopRuns]->page_slug}}">
+                              <span>{{$websitePagesList[$loopRuns]->page_title}}</span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="/store">
-                                <i class="fa fa-shopping-cart"></i> <span>Store Page</span>
-                            </a>
-                        </li>
+                          </li>
+                          <?php $loopRuns++ ?>
+                          @if($loopRuns == $websitePagesAmount)
+                            @break
+                          @endif
+                        @endwhile
                         <li class="header">USER NAVIGATION</li>
                         <li @if(Request::is('profile')) class='active' @endif>
                             <a href="/profile"><i class="fa fa-gear">
