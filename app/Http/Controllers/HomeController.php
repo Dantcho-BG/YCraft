@@ -11,7 +11,7 @@ class HomeController extends Controller
 
     public function getListOfWebsitePages () {
 
-      $pagesList = DB::select("SELECT page_title, page_url from website_pages");
+      $pagesList = DB::select("SELECT page_slug, page_title from website_pages");
       return $pagesList;
 
     }

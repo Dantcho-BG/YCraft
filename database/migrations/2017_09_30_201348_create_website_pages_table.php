@@ -15,16 +15,17 @@ class CreateWebsitePagesTable extends Migration
     {
         Schema::create('website_pages', function (Blueprint $table) {
             $table->increments('page_id');
+            $table->string('page_slug');
             $table->string('page_title');
-            $table->string('page_url');
+            $table->string('page_content')->default('text_module');
             $table->timestamps();
         });
-        
+
         // Insert some stuff
         DB::table('website_pages')->insert(
             array(
                 'page_title' => 'Home',
-                'page_url' => '/'
+                'page_slug' => '/'
             )
         );
     }

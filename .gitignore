@@ -18,4 +18,8 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
+<<<<<<< HEAD
 public/uploads/avatars/*.png
+=======
+public/uploads/avatars/Dantcho1509063819.png
+>>>>>>> parent of 63547cc... Revert "Some minor changes"

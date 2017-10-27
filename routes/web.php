@@ -11,6 +11,7 @@
 |
 */
 
+//Home Page
 Route::get('/', 'HomeController@index');
 
 // Authentication Routes...
