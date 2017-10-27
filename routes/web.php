@@ -38,6 +38,6 @@ Route::get('/home', 'HomeController@redirect')->name('home');
 Route::get('/dashboard', 'Dashboard\DashboardController@showDashboardPreviewPage')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
 
 //Dashboard CMS Pages Routes...
-Route::get('/dashboard/pages', 'Dashboard\CMS\WebsitePagesCreatorController@showPagesList')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
-Route::get('/dashboard/pages/create', 'Dashboard\CMS\WebsitePagesCreatorController@showCreateNewPageForm')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
-Route::post('/dashboard/pages/create', 'Dashboard\CMS\WebsitePagesCreatorController@createNewPage')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
+Route::get('/dashboard/pages', 'Dashboard\CMS\WebsitePagesController@showPagesList')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
+Route::get('/dashboard/pages/create', 'Dashboard\CMS\WebsitePagesController@showCreateNewPageForm')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
+Route::post('/dashboard/pages/create', 'Dashboard\CMS\WebsitePagesController@createNewPage')->middleware(\App\Http\Middleware\CheckIfAdmin::class);

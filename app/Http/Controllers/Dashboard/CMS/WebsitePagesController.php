@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class WebsitePagesCreatorController extends Controller {
+class WebsitePagesController extends Controller {
 
   public function getListOfPages () {
 
-    $pagesList = DB::select("SELECT page_id, page_slug, page_title from website_pages");
+    $pagesList = DB::select("SELECT page_id, page_slug, page_title, page_content from website_pages");
     return $pagesList;
 
   }

@@ -39,6 +39,7 @@
                   <th>Page ID</th>
                   <th>Page Title</th>
                   <th>Page URL</th>
+                  <th>Page Content</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -64,6 +65,7 @@
                   <th>Page ID</th>
                   <th>Page Title</th>
                   <th>Page URL</th>
+                  <th>Page Content</th>
                 </tr>
                 </tfoot>
               </table>
