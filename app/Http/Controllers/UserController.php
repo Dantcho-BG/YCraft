@@ -9,22 +9,12 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Image;
 use File;
-use DB;
 
-class UserController extends Controller {
-
-  public function getListOfWebsitePages () {
-
-    $pagesList = DB::select("SELECT page_slug, page_title from website_pages");
-    return $pagesList;
-
-  }
-
+class UserController extends Controller
+{
     public function profile () {
         if (Auth::user()) {
-          $pagesList = $this->getListOfWebsitePages();
-          $pagesAmount = count($pagesList);
-            return view("profile", array('user'=> Auth::user()), ['websitePagesList'=>$pagesList, 'websitePagesAmount'=>$pagesAmount]);
+            return view("profile", array('user'=> Auth::user()));
         }
         else {
             return view("auth.login");
