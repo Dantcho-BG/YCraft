@@ -27,13 +27,24 @@
                         </li>
                         <li class="@if(Request::is('dashboard/modules/*') || Request::is('dashboard/modules')) active menu-open @endif treeview">
                             <a href="#">
-                                <i class="fa fa-cube "></i> <span>Modules</span>
+                                <i class="fa fa-cube"></i> <span>Modules</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
                                 <li @if(Request::is('dashboard/pages')) class='active' @endif><a href="/dashboard/modules"><i class="fa fa-file"></i> Modules</a></li>
+                            </ul>
+                        </li>
+                        <li class="@if(Request::is('dashboard/users/*') || Request::is('dashboard/users')) active menu-open @endif treeview">
+                            <a href="#">
+                                <i class="fa fa-user"></i> <span>Users</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li @if(Request::is('dashboard/users')) class='active' @endif><a href="/dashboard/users"><i class="fa fa-user"></i> Users</a></li>
                             </ul>
                         </li>
                     @endif
