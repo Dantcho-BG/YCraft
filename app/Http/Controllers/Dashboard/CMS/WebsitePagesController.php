@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class WebsitePagesController extends Controller {
 
-  public function getListOfPages () {
+  public static function getListOfPages () {
 
     $pagesList = DB::select("SELECT page_id, page_slug, page_title, page_content from website_pages");
     return $pagesList;

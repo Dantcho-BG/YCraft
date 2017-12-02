@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Redirect;
+use App\Http\Controllers\Dashboard\CMS\WebsitePagesController;
 
-class HomeController extends Controller
-{
+class HomeController extends Controller {
 
 
 
@@ -17,15 +17,15 @@ class HomeController extends Controller
      * @return void
      */
 
-     public function getListOfWebsitePages () {
+     /*public function getListOfWebsitePages () {
 
        $pagesList = DB::select("SELECT page_slug, page_title from website_pages");
        return $pagesList;
 
-     }
+     }*/
 
     public function index() {
-        $pagesList = $this->getListOfWebsitePages();
+        $pagesList = WebsitePagesController::getListOfPages();
         $pagesAmount = count($pagesList);
         //return redirect('/');
         return view('home', ['websitePagesList'=>$pagesList, 'websitePagesAmount'=>$pagesAmount]);
