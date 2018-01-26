@@ -10,4 +10,4 @@ This project I started just to train myself. When it's finished it should have a
 
 ## License
 
-This project is licensed under the GNU License - see the [LICENSE.md](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
