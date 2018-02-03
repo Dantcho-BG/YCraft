@@ -70,7 +70,10 @@ class UserController extends Controller {
             Auth::user()->save();
         }
 
-        return view('profile', array('user'=> Auth::user()));
+        $pagesList = WebsitePagesController::getListOfPages();
+        $pagesAmount = count($pagesList);
+
+        return view('profile', array('user'=> Auth::user()), ['websitePagesList'=>$pagesList, 'websitePagesAmount'=>$pagesAmount]);
 
     }
 
@@ -144,7 +147,9 @@ class UserController extends Controller {
 
             Auth::user()->save();
 
-            return view('profile', array('user'=> Auth::user()));
+            $pagesList = WebsitePagesController::getListOfPages();
+            $pagesAmount = count($pagesList);
+            return view('profile', array('user'=> Auth::user()), ['websitePagesList'=>$pagesList, 'websitePagesAmount'=>$pagesAmount]);
 
         }
         else {
