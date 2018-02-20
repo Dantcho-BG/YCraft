@@ -14,7 +14,7 @@
                 <ul class="nav navbar-nav">
                   <?php $loopRuns = 0 ?>
                   @while(true)
-                    <li @if(Request::is($websitePagesList[$loopRuns]->page_slug)) class="active" @endif><a href="{{$websitePagesList[$loopRuns]->page_slug}}">{{$websitePagesList[$loopRuns]->page_title}} @if(Request::is($websitePagesList[$loopRuns]->page_slug)) <span class="sr-only">(current)</span> @endif</a></li>
+                    <li @if(Request::is($websitePagesList[$loopRuns]->page_slug)) class="active" @endif><a href="{{$websitePagesList[$loopRuns]->page_slug}}">{{$websitePagesList[$loopRuns]->page_name}} @if(Request::is($websitePagesList[$loopRuns]->page_slug)) <span class="sr-only">(current)</span> @endif</a></li>
                     <?php $loopRuns++ ?>
                     @if($loopRuns == $websitePagesAmount)
                       @break

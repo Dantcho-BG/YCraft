@@ -16,15 +16,15 @@ class UserController extends Controller {
 
   /*public function getListOfWebsitePages () {
 
-    $pagesList = DB::select("SELECT page_slug, page_title from website_pages");
+    $pagesList = DB::select("SELECT page_slug, page_name from website_pages");
     return $pagesList;
 
   }*/
 
     public function profile () {
         if (Auth::user()) {
-          $pagesList = WebsitePagesController::getListOfPages();
-          $pagesAmount = count($pagesList);
+            $pagesList = WebsitePagesController::getListOfPages();
+            $pagesAmount = count($pagesList);
             return view("profile", array('user'=> Auth::user()), ['websitePagesList'=>$pagesList, 'websitePagesAmount'=>$pagesAmount]);
         }
         else {
@@ -77,7 +77,7 @@ class UserController extends Controller {
 
     }
 
-    public function passwordChangeValidation(array $data) {
+    public function passwordChangeValidation (array $data) {
         $messages = [
             'current_password.required' => 'Please enter current password',
             'password.required' => 'Please enter a new password',

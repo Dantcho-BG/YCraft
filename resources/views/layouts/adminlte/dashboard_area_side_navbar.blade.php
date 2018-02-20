@@ -56,7 +56,7 @@
                         @while(true)
                           <li>
                             <a href="{{$websitePagesList[$loopRuns]->page_slug}}">
-                              <span>{{$websitePagesList[$loopRuns]->page_title}}</span>
+                              <span>{{$websitePagesList[$loopRuns]->page_name}}</span>
                             </a>
                           </li>
                           <?php $loopRuns++ ?>
