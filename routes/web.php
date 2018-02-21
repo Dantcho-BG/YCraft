@@ -41,3 +41,5 @@ Route::get('/dashboard', 'Dashboard\DashboardController@showDashboardPreviewPage
 Route::get('/dashboard/pages', 'Dashboard\CMS\WebsitePagesController@showPagesList')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
 Route::get('/dashboard/pages/create', 'Dashboard\CMS\WebsitePagesController@showCreateNewPageForm')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
 Route::post('/dashboard/pages/create', 'Dashboard\CMS\WebsitePagesController@createNewPage')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
+Route::get('/dashboard/pages/confirmdeletepage/{page_id}', 'Dashboard\CMS\WebsitePagesController@confirmPageDelete')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
+Route::post('/dashboard/pages/deletepage/{page_id}', 'Dashboard\CMS\WebsitePagesController@deletePage')->middleware(\App\Http\Middleware\CheckIfAdmin::class);
