@@ -1,6 +1,7 @@
+I'm no longer working on this project.
 # YCraft [![forthebadge](http://forthebadge.com/images/badges/designed-in-ms-paint.svg)](http://forthebadge.com)
 
-This project I started just to train myself. When it's finished it should have an online shop which should be able to comunicate with a Minecraft server and make changes autumaticaly, a basic blog and maybe a forum.
+This project I started just to train myself. When it's finished it should have an online shop which should be able to comunicate with a Minecraft server and make changes automatically, a basic blog and maybe a forum.
 
 ## Built With
 
